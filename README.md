@@ -6,3 +6,5 @@
 - Bootstrap
 - React-icons
 - React-player
+
+# [LIVE-View](https://grand-prix-landing-page.vercel.app/)
