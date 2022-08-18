@@ -1,9 +1,11 @@
-import { Container, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Form, FormGroup, Input} from 'reactstrap'
+import { Container, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Form} from 'reactstrap'
 import {NavLink} from 'react-router-dom'
 import Logo from './Logo'
 import {FaAngleDown, FaAngleUp, FaSearch, FaTimes} from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import useScrollPosition from '../hooks/useScrollPosition'
+import {Media} from 'react-breakpoints'
+
 
 const Header = () => {
 const [newsIsOpen, setNewsIsOpen] = useState(false)
@@ -16,7 +18,7 @@ const scrollPosition = useScrollPosition();
 
 useEffect(()=> {
   if(scrollPosition > 0) setFillNav(true)
-})
+}, [fillNav, scrollPosition])
 
 
 

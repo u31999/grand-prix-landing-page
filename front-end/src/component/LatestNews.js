@@ -20,9 +20,11 @@ const LatestNews = ({news}) => {
         </Card>
 
         <Card 
-        className='d-flex flex-row text-center popoinsFamily bigFont trasparentBackground border-0 f05 gap-25'>
+        className='d-flex featured-flex-container text-center popoinsFamily
+         bigFont trasparentBackground border-0 f05 gap-25 justify-content-center'>
             { news.map( n =>  (
-                <Card key={n.id} className='border-0 d-flex align-items-center justify-content-center w-50'>
+                <Card key={n.id} 
+                className='border-0 d-flex flex-column align-items-center justify-content-center featured-card my-4'>
                 <CardImg src={n.imgSrc} alt={n.title} className='w-100 h-100 imageLatest' />
                 <div className='overlay gradient-custom d-flex'>
                     <CardBody className='d-flex flex-column justify-content-end'>
